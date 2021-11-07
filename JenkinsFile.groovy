@@ -13,3 +13,4 @@ node('master') {
         sh "tar -czvf package.tar.gz *"
         archiveArtifacts artifacts: 'package.tar.gz', followSymlinks: false
     }
+}
