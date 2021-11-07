@@ -1,5 +1,5 @@
 node('master') {
-  stage('trigger Terraform) {
+  stage('trigger Terraform') {
         build wait: false, job: 'terraform-run', parameters: [credentials(name: 'aws-creds', value: 'aws')]
         }
     stage('checkout code') {
@@ -13,7 +13,7 @@ node('master') {
     stage('test') {
       //  sh "node server.js &"
     }
-     stage('Terraform Destroy ') {
+     stage('Terraform Destroy') {
       build wait: false, job: 'terraform-destroy', parameters: [credentials(name: 'aws-creds', value: 'aws')]
     }
     stage('Package') {
