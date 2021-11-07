@@ -14,7 +14,7 @@ node('master') {
       //  sh "node server.js &"
     }
      stage('Terraform Destroy ') {
-      //  sh "node server.js &"
+      build wait: false, job: 'terraform-destroy', parameters: [credentials(name: 'aws-creds', value: 'aws')]
     }
     stage('Package') {
         sh "tar -czvf package.tar.gz *"
