@@ -18,7 +18,7 @@ const mount = st({
   passthrough: true
 })
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 8081
 const selectedLocales = process.env.DEFAULT_LOCALE ? process.env.DEFAULT_LOCALE.toLowerCase().split(',') : process.env.DEFAULT_LOCALE
 const preserveLocale = process.argv.includes('--preserveLocale')
 const serveOnly = process.argv.includes('--serve-only')
