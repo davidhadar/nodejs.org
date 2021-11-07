@@ -8,7 +8,7 @@ node('master') {
     }
     stage('build') {
         sh 'npm install' 
-        sleep 15s
+        sleep 5
     }
     stage('test') {
       //  sh "node server.js &"
